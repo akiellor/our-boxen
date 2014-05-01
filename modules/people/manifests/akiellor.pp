@@ -20,4 +20,9 @@ class people::akiellor {
   }
 
   include osx::keyboard::capslock_to_control
+
+  repository { "/Users/${::boxen_user}/src/restaurant-roulette":
+    source   => 'charltonaustin/restaurant-roulette',
+    provider => 'git';
+  }
 }
