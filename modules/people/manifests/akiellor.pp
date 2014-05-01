@@ -18,4 +18,6 @@ class people::akiellor {
   class { 'osx::global::key_repeat_delay':
     delay => 0
   }
+
+  include osx::keyboard::capslock_to_control
 }
