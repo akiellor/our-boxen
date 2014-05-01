@@ -89,4 +89,5 @@ node default {
   }
 
   include chrome
+  include adobe_reader
 }

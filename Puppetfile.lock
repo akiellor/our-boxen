@@ -1,4 +1,9 @@
 GITHUBTARBALL
+  remote: boxen/puppet-adobe_reader
+  specs:
+    adobe_reader (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (3.6.0)
@@ -99,6 +104,7 @@ GITHUBTARBALL
     module-data (0.0.3)
 
 DEPENDENCIES
+  adobe_reader (= 1.2.0)
   boxen (= 3.6.0)
   chrome (= 1.1.2)
   dnsmasq (= 1.0.1)
