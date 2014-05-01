@@ -10,4 +10,12 @@ class people::akiellor {
   class { 'osx::dock::position':
     position => 'right'
   }
+
+  class { 'osx::global::key_repeat_rate':
+    rate => 0
+  }
+
+  class { 'osx::global::key_repeat_delay':
+    delay => 0
+  }
 }
