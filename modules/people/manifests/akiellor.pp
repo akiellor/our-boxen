@@ -25,4 +25,25 @@ class people::akiellor {
     source   => 'charltonaustin/restaurant-roulette',
     provider => 'git';
   }
+
+  file { ["/Users/${::boxen_user}/.vim",
+          "/Users/${::boxen_user}/.vim/bundle"]:
+    ensure => directory,
+  }
+
+  file { "/Users/${::boxen_user}/.vimrc":
+    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=dark\ncolorscheme solarized"
+  }
+
+  repository { "/Users/${::boxen_user}/.vim/bundle/vim-pathogen":
+    source   => 'tpope/vim-pathogen',
+    provider => 'git',
+    require  => File["/Users/${::boxen_user}/.vim/bundle"]
+  }
+
+  repository { "/Users/${::boxen_user}/.vim/bundle/vim-colors-solarized":
+    source   => 'altercation/vim-colors-solarized',
+    provider => 'git',
+    require  => File["/Users/${::boxen_user}/.vim/bundle"]
+  }
 }
