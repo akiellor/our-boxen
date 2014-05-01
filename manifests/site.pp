@@ -90,4 +90,6 @@ node default {
 
   include chrome
   include adobe_reader
+  include vagrant
+  include virtualbox
 }

@@ -57,6 +57,8 @@ github "xquartz",     "1.1.1"
 github "chrome",      "1.1.2"
 github "osx",         "2.2.2"
 github "adobe_reader","1.2.0"
+github "vagrant",     "3.0.7"
+github "virtualbox",  "1.0.11"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
