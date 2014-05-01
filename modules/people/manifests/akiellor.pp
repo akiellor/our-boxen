@@ -7,6 +7,10 @@ class people::akiellor {
     value  => 'akiellor@gmail.com'
   }
 
+  git::config::global { 'push.default':
+    value => 'matching',
+  }
+
   class { 'osx::dock::position':
     position => 'right'
   }
@@ -32,7 +36,7 @@ class people::akiellor {
   }
 
   file { "/Users/${::boxen_user}/.vimrc":
-    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=light\ncolorscheme solarized"
+    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=light\ncolorscheme solarized",
   }
 
   repository { "/Users/${::boxen_user}/.vim/bundle/vim-pathogen":
