@@ -32,7 +32,7 @@ class people::akiellor {
   }
 
   file { "/Users/${::boxen_user}/.vimrc":
-    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=dark\ncolorscheme solarized"
+    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=light\ncolorscheme solarized"
   }
 
   repository { "/Users/${::boxen_user}/.vim/bundle/vim-pathogen":
@@ -43,6 +43,12 @@ class people::akiellor {
 
   repository { "/Users/${::boxen_user}/.vim/bundle/vim-colors-solarized":
     source   => 'altercation/vim-colors-solarized',
+    provider => 'git',
+    require  => File["/Users/${::boxen_user}/.vim/bundle"]
+  }
+
+  repository { "/Users/${::boxen_user}/.vim/bundle/vim-puppet":
+    source   => 'rodjek/vim-puppet',
     provider => 'git',
     require  => File["/Users/${::boxen_user}/.vim/bundle"]
   }
