@@ -56,4 +56,6 @@ class people::akiellor {
     provider => 'git',
     require  => File["/Users/${::boxen_user}/.vim/bundle"]
   }
+
+  include clojure
 }

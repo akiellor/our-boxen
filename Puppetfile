@@ -59,6 +59,8 @@ github "osx",         "2.2.2"
 github "adobe_reader","1.2.0"
 github "vagrant",     "3.0.7"
 github "virtualbox",  "1.0.11"
+github "clojure",     "1.2.0"
+github "java",        "1.5.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

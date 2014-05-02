@@ -14,6 +14,11 @@ GITHUBTARBALL
     chrome (1.1.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-clojure
+  specs:
+    clojure (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.1)
@@ -47,6 +52,11 @@ GITHUBTARBALL
   remote: boxen/puppet-hub
   specs:
     hub (1.3.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-java
+  specs:
+    java (1.5.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
@@ -117,6 +127,7 @@ DEPENDENCIES
   adobe_reader (= 1.2.0)
   boxen (= 3.6.0)
   chrome (= 1.1.2)
+  clojure (= 1.2.0)
   dnsmasq (= 1.0.1)
   foreman (= 1.2.0)
   gcc (= 2.0.100)
@@ -125,6 +136,7 @@ DEPENDENCIES
   homebrew (= 1.9.2)
   hub (= 1.3.0)
   inifile (= 1.0.3)
+  java (= 1.5.0)
   module-data (= 0.0.3)
   nodejs (= 3.7.0)
   openssl (= 1.0.0)
