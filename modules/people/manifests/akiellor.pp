@@ -57,5 +57,23 @@ class people::akiellor {
     require  => File["/Users/${::boxen_user}/.vim/bundle"]
   }
 
+  repository { "/Users/${::boxen_user}/.vim/bundle/vim-fireplace":
+    source   => 'tpope/vim-fireplace',
+    provider => 'git',
+    require  => File["/Users/${::boxen_user}/.vim/bundle"]
+  }
+
+  repository { "/Users/${::boxen_user}/.vim/bundle/vim-clojure-static":
+    source   => 'guns/vim-clojure-static',
+    provider => 'git',
+    require  => File["/Users/${::boxen_user}/.vim/bundle"]
+  }
+
+  repository { "/Users/${::boxen_user}/.vim/bundle/rainbow_parenthesis.vim":
+    source   => 'kien/rainbow_parentheses.vim',
+    provider => 'git',
+    require  => File["/Users/${::boxen_user}/.vim/bundle"]
+  }
+
   include clojure
 }
