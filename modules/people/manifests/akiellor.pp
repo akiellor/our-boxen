@@ -82,4 +82,11 @@ class people::akiellor {
   }
 
   include clojure
+
+  boxen::env_script { 'serve-python':
+    content => "alias serve=\"python -m SimpleHTTPServer\""
+  }
+
+  package { ['testdisk', 'watch']:
+  }
 }
