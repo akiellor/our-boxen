@@ -36,7 +36,7 @@ class people::akiellor {
   }
 
   file { "/Users/${::boxen_user}/.vimrc":
-    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=light\ncolorscheme solarized",
+    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=light\ncolorscheme solarized\nset noswapfile",
   }
 
   repository { "/Users/${::boxen_user}/.vim/bundle/vim-pathogen":
@@ -86,6 +86,9 @@ class people::akiellor {
   boxen::env_script { 'serve-python':
     content => "alias serve=\"python -m SimpleHTTPServer\""
   }
+
+  include iterm2::stable
+  include iterm2::colors::solarized_dark
 
   package { ['testdisk', 'watch']:
   }
