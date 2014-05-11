@@ -84,7 +84,7 @@ class people::akiellor {
   include clojure
 
   boxen::env_script { 'serve-python':
-    content => "alias serve=\"python -m SimpleHTTPServer\""
+    content => "alias serve=\"python -m SimpleHTTPServer\"",
   }
 
   include iterm2::stable
@@ -97,5 +97,10 @@ class people::akiellor {
 
   python::pip {'awscli':
     virtualenv => $python::config::global_venv
+  }
+
+  repository { "/Users/${::boxen_user}/src/akiellor.github.io":
+    source   => 'akiellor/akiellor.github.io',
+    provider => 'git';
   }
 }
