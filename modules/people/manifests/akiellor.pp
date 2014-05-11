@@ -92,4 +92,10 @@ class people::akiellor {
 
   package { ['testdisk', 'watch']:
   }
+
+  include python
+
+  python::pip {'awscli':
+    virtualenv => $python::config::global_venv
+  }
 }
