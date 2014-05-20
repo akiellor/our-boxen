@@ -36,7 +36,7 @@ class people::akiellor {
   }
 
   file { "/Users/${::boxen_user}/.vimrc":
-    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=light\ncolorscheme solarized\nset noswapfile",
+    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=light\ncolorscheme solarized\nset noswapfile\nlet &t_Co=256\n",
   }
 
   repository { "/Users/${::boxen_user}/.vim/bundle/vim-pathogen":
@@ -90,7 +90,7 @@ class people::akiellor {
   include iterm2::stable
   include iterm2::colors::solarized_dark
 
-  package { ['testdisk', 'watch']:
+  package { ['testdisk', 'watch', 'bazaar', 'ansible', 'tmux', 'heroku-toolbelt', 'phantomjs']:
   }
 
   include python
@@ -102,5 +102,10 @@ class people::akiellor {
   repository { "/Users/${::boxen_user}/src/akiellor.github.io":
     source   => 'akiellor/akiellor.github.io',
     provider => 'git';
+  }
+
+  repository { "/Users/${::boxen_user}/src/cd-office-hours":
+    source   => 'maxamg/cd-office-hours',
+    provider => 'git',
   }
 }
