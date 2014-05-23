@@ -108,4 +108,6 @@ class people::akiellor {
     source   => 'maxamg/cd-office-hours',
     provider => 'git',
   }
+
+  include docker
 }
