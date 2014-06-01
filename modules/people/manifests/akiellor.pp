@@ -87,6 +87,10 @@ class people::akiellor {
     content => "alias serve=\"python -m SimpleHTTPServer\"",
   }
 
+  boxen::env_script { 'docker':
+    content => "export DOCKER_HOST=tcp://localhost:4243",
+  }
+
   include iterm2::stable
   include iterm2::colors::solarized_dark
 
@@ -109,5 +113,5 @@ class people::akiellor {
     provider => 'git',
   }
 
-  include docker
+  package { ["docker", "boot2docker"]: }
 }
