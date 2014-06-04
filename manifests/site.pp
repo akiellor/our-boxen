@@ -81,6 +81,7 @@ node default {
       'findutils',
       'gnu-tar',
       'libxml2',
+      'libxslt',
     ]:
   }
 
