@@ -36,7 +36,7 @@ class people::akiellor {
   }
 
   file { "/Users/${::boxen_user}/.vimrc":
-    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=light\ncolorscheme solarized\nset noswapfile\nlet &t_Co=256\n",
+    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=light\ncolorscheme solarized\nset noswapfile\nlet &t_Co=256\nset tabstop=2 softtabstop=2 shiftwidth=2 expandtab\n",
   }
 
   repository { "/Users/${::boxen_user}/.vim/bundle/vim-pathogen":
@@ -93,10 +93,6 @@ class people::akiellor {
     content => "alias serve=\"python -m SimpleHTTPServer\"",
   }
 
-  boxen::env_script { 'docker':
-    content => "export DOCKER_HOST=tcp://localhost:4243",
-  }
-
   include iterm2::stable
   include iterm2::colors::solarized_dark
 
@@ -119,5 +115,9 @@ class people::akiellor {
     provider => 'git',
   }
 
-  package { ["docker", "boot2docker"]: }
+  package { ["docker", "boot2docker"]:
+    ensure => absent,
+  }
+
+  include docker
 }
