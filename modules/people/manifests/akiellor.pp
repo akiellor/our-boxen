@@ -120,4 +120,6 @@ class people::akiellor {
   }
 
   include docker
+
+  include minecraft
 }
