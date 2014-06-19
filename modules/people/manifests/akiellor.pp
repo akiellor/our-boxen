@@ -96,7 +96,7 @@ class people::akiellor {
   include iterm2::stable
   include iterm2::colors::solarized_dark
 
-  package { ['testdisk', 'watch', 'bazaar', 'ansible', 'tmux', 'heroku-toolbelt', 'phantomjs', 'maven31', 'slimerjs']:
+  package { ['testdisk', 'watch', 'bazaar', 'ansible', 'tmux', 'heroku-toolbelt', 'phantomjs', 'maven31', 'slimerjs', 'gpg']:
   }
 
   include python
