@@ -96,12 +96,20 @@ class people::akiellor {
   include iterm2::stable
   include iterm2::colors::solarized_dark
 
-  package { ['testdisk', 'watch', 'bazaar', 'ansible', 'tmux', 'heroku-toolbelt', 'phantomjs', 'maven31', 'slimerjs', 'gpg']:
+  package { ['testdisk', 'watch', 'bazaar', 'ansible', 'tmux', 'heroku-toolbelt', 'phantomjs', 'maven31', 'slimerjs', 'gpg', 'tree', 'wget', 'imagemagick']:
   }
 
   include python
 
   python::pip {'awscli':
+    virtualenv => $python::config::global_venv
+  }
+
+  python::pip {'jrnl':
+    virtualenv => $python::config::global_venv
+  }
+
+  python::pip {'fig':
     virtualenv => $python::config::global_venv
   }
 
