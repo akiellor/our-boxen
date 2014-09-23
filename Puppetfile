@@ -65,6 +65,7 @@ github "iterm2",      "1.0.9"
 github "python",      "1.3.0"
 github "minecraft",   "1.0.2"
 github "intellij",    "1.5.1"
+github "skype",       "1.0.9"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

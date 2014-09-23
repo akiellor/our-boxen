@@ -145,4 +145,6 @@ class people::akiellor {
     domain => 'NSGlobalDomain',
     value  => 'true',
   }
+
+  include skype
 }
