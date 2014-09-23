@@ -11,6 +11,11 @@ class people::akiellor {
     value => 'matching',
   }
 
+  git::config::global { 'alias.st': value => 'status' }
+  git::config::global { 'alias.purr': value => 'pull --rebase' }
+  git::config::global { 'alias.df': value => 'diff' }
+  git::config::global { 'alias.dc': value => 'diff --staged' }
+
   class { 'osx::dock::position':
     position => 'right'
   }
@@ -130,4 +135,14 @@ class people::akiellor {
   include docker
 
   include minecraft
+
+  class { 'intellij':
+    edition => 'community',
+  }
+
+  boxen::osx_defaults { 'Make function keys do real things, and not apple things':
+    key    => 'com.apple.keyboard.fnState',
+    domain => 'NSGlobalDomain',
+    value  => 'true',
+  }
 }
