@@ -95,4 +95,6 @@ node default {
   include adobe_reader
   include vagrant
   include virtualbox
+  include mumble
+  include packer
 }

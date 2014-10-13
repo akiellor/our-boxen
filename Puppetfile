@@ -66,6 +66,8 @@ github "python",      "1.3.0"
 github "minecraft",   "1.0.2"
 github "intellij",    "1.5.1"
 github "skype",       "1.0.9"
+github "mumble",      "1.0.5"
+github "packer",      "1.3.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
