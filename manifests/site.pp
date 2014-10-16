@@ -97,4 +97,6 @@ node default {
   include virtualbox
   include mumble
   include packer
+  include fonts
+  include opensans
 }
