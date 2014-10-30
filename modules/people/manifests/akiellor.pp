@@ -147,4 +147,8 @@ class people::akiellor {
   }
 
   include skype
+
+  include go
+  go::version { '1.1.1': }
+  go::version { '1.1.2': }
 }

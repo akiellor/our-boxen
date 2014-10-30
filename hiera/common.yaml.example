@@ -20,4 +20,4 @@ ruby::version::alias:
   2.0.0: 2.0.0-p353
 
 # See https://github.com/boxen/puppet-java for docs
-java::update_version: 51
+java::update_version: 60
