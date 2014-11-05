@@ -69,6 +69,7 @@ github "skype",       "1.0.9"
 github "mumble",      "1.0.5"
 github "packer",      "1.3.0"
 github "fonts",       "0.0.3"
+github "mou",         "1.1.3"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
