@@ -158,6 +158,7 @@ class people::akiellor {
   include mou
   include mou::themes
   include atom
+  atom::package { 'language-puppet': }
 
   include projects::openwireless
 }
