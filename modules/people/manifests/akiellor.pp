@@ -158,4 +158,6 @@ class people::akiellor {
   include mou
   include mou::themes
   include atom
+
+  include projects::openwireless
 }
