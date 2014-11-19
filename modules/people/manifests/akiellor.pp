@@ -141,9 +141,17 @@ class people::akiellor {
   }
 
   boxen::osx_defaults { 'Make function keys do real things, and not apple things':
+    user   => $::boxen_user,
     key    => 'com.apple.keyboard.fnState',
     domain => 'NSGlobalDomain',
     value  => 'true',
+  }
+
+  boxen::osx_defaults { 'Make tab key do real things, and not apple things':
+    user   => $::boxen_user,
+    key => 'AppleKeyboardUIMode',
+    domain => 'NSGlobalDomain',
+    value => '2',
   }
 
   include skype
