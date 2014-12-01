@@ -169,5 +169,5 @@ class people::akiellor {
   atom::package { 'language-puppet': }
 
   include projects::openwireless
-  package { 'ncmpc': }
+  package { ['ncmpc', 'tig', 'colordiff']: }
 }
