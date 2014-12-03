@@ -169,5 +169,9 @@ class people::akiellor {
   atom::package { 'language-puppet': }
 
   include projects::openwireless
-  package { ['ncmpc', 'tig', 'colordiff']: }
+  package { ['ncmpc', 'tig', 'colordiff', 'bash-completion']: }
+
+  boxen::env_script { 'bash-completion':
+    content => "[ -f $::homebrew::config::installdir/etc/bash_completion ] && . $::homebrew::config::installdir/etc/bash_completion",
+  }
 }
