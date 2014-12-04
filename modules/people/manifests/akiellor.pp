@@ -8,7 +8,7 @@ class people::akiellor {
   }
 
   git::config::global { 'push.default':
-    value => 'matching',
+    value => 'simple',
   }
 
   git::config::global { 'alias.st': value => 'status' }
@@ -175,7 +175,7 @@ class people::akiellor {
   atom::package { 'language-puppet': }
 
   include projects::openwireless
-  package { ['ncmpc', 'tig', 'colordiff', 'bash-completion']: }
+  package { ['ncmpc', 'tig', 'colordiff', 'bash-completion', 'ranger']: }
 
   boxen::env_script { 'bash-completion':
     content => "[ -f $::homebrew::config::installdir/etc/bash_completion ] && . $::homebrew::config::installdir/etc/bash_completion",
