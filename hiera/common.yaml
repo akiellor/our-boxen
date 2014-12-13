@@ -19,5 +19,5 @@ ruby::rbenv_plugins:
 ruby::version::alias:
   2.0.0: 2.0.0-p353
 
-# See https://github.com/boxen/puppet-java for docs
-java::update_version: 60
+go::chgo_source: "mattheath/chgo"
+go::chgo_version: "3f0fb76a1eea09263011e3ad7d165bc525326de7"

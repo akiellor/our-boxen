@@ -50,6 +50,12 @@ class people::akiellor {
     require  => File["/Users/${::boxen_user}/.vim/bundle"]
   }
 
+  repository { "/Users/${::boxen_user}/.vim/bundle/vim-javascript":
+    source   => 'pangloss/vim-javascript',
+    provider => 'git',
+    require  => File["/Users/${::boxen_user}/.vim/bundle"]
+  }
+
   repository { "/Users/${::boxen_user}/.vim/bundle/vim-colors-solarized":
     source   => 'altercation/vim-colors-solarized',
     provider => 'git',
@@ -163,8 +169,17 @@ class people::akiellor {
   include skype
 
   include go
+
+  exec { "nuke-wfarr-chgo":
+    provider => shell,
+    command  => "rm -rf ${boxen::config::home}/chgo",
+    onlyif   => "[[ -s ${boxen::config::home}/chgo ]] && cd ${boxen::config::home}/chgo && git remote -v | grep wfarr",
+    before   => Repository[$go::chgo_root],
+  }
+
   go::version { '1.1.1': }
   go::version { '1.1.2': }
+  go::version { '1.4': }
 
   package { 'mercurial':
   }
@@ -179,5 +194,10 @@ class people::akiellor {
 
   boxen::env_script { 'bash-completion':
     content => "[ -f $::homebrew::config::installdir/etc/bash_completion ] && . $::homebrew::config::installdir/etc/bash_completion",
+  }
+
+  repository { "/Users/${::boxen_user}/src/gocd":
+    source   => 'akiellor/gocd',
+    provider => 'git';
   }
 }
