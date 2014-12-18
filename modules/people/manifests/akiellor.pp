@@ -110,6 +110,10 @@ class people::akiellor {
     content => "alias serve=\"python -m SimpleHTTPServer\"",
   }
 
+  boxen::env_script { 'gopath':
+    content => "export GOPATH=/Users/${::boxen_user}\nexport PATH=\$PATH:/Users/${::boxen_user}/bin",
+  }
+
   include iterm2::stable
   include iterm2::colors::solarized_dark
 
