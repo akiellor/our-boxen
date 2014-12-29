@@ -204,4 +204,9 @@ class people::akiellor {
     source   => 'akiellor/gocd',
     provider => 'git';
   }
+
+  package { 'Safe':
+    provider => 'compressed_app',
+    source   => 'https://github.com/safeapp/safe/releases/download/VERSION-1.4/Safe-1.4-MacOSX.zip',
+  }
 }
