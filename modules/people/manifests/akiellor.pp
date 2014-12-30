@@ -41,7 +41,7 @@ class people::akiellor {
   }
 
   file { "/Users/${::boxen_user}/.vimrc":
-    content => "runtime bundle/vim-pathogen/autoload/pathogen.vim\nexecute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nlet g:solarized_termcolors=256\nset background=light\ncolorscheme solarized\nset noswapfile\nlet &t_Co=256\nset tabstop=2 softtabstop=2 shiftwidth=2 expandtab\n",
+    source => "puppet:///modules/people/${::boxen_user}.vimrc",
   }
 
   repository { "/Users/${::boxen_user}/.vim/bundle/vim-pathogen":
@@ -103,6 +103,20 @@ class people::akiellor {
     provider => 'git',
     require  => File["/Users/${::boxen_user}/.vim/bundle"]
   }
+
+  repository { "/Users/${::boxen_user}/.vim/bundle/vim-go":
+    source   => 'fatih/vim-go',
+    provider => 'git',
+    require  => File["/Users/${::boxen_user}/.vim/bundle"],
+  }
+
+  repository { "/Users/${::boxen_user}/.vim/bundle/tagbar":
+    source   => 'majutsushi/tagbar',
+    provider => 'git',
+    require  => File["/Users/${::boxen_user}/.vim/bundle"],
+  }
+
+  package { 'ctags':}
 
   include clojure
 
