@@ -36,3 +36,5 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
     \ }
+
+let g:ctrlp_user_command = 'cd %s && git ls-files'
