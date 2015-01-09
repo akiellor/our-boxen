@@ -140,6 +140,10 @@ class people::akiellor {
     virtualenv => $python::config::global_venv
   }
 
+  python::pip {'tmuxp':
+    virtualenv => $python::config::global_venv
+  }
+
   python::pip {'jrnl':
     virtualenv => $python::config::global_venv
   }
@@ -223,4 +227,6 @@ class people::akiellor {
     provider => 'compressed_app',
     source   => 'https://github.com/safeapp/safe/releases/download/VERSION-1.4/Safe-1.4-MacOSX.zip',
   }
+
+  include adium
 }

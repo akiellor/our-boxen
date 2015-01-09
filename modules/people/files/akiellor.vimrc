@@ -37,4 +37,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
     \ }
 
-let g:ctrlp_user_command = 'cd %s && git ls-files'
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_user_command = ['.git', 'git -C %s ls-files --exclude-standard --others --cached'
+let g:ctrlp_use_caching = 0
