@@ -229,4 +229,6 @@ class people::akiellor {
   }
 
   include adium
+
+  package { 'task': }
 }
