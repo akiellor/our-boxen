@@ -235,4 +235,6 @@ class people::akiellor {
   package { 'cloc': }
 
   include hipchat
+
+  include brewcask
 }

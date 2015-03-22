@@ -19,6 +19,11 @@ GITHUBTARBALL
     boxen (3.6.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-brewcask
+  specs:
+    brewcask (0.0.6)
+
+GITHUBTARBALL
   remote: boxen/puppet-chrome
   specs:
     chrome (1.1.2)
@@ -188,6 +193,7 @@ DEPENDENCIES
   adobe_reader (= 1.2.0)
   atom (= 1.1.0)
   boxen (= 3.6.1)
+  brewcask (= 0.0.6)
   chrome (= 1.1.2)
   clojure (= 1.2.0)
   dnsmasq (= 1.0.1)

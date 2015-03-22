@@ -73,6 +73,7 @@ github "mou",         "1.1.3"
 github "atom",        "1.1.0"
 github "adium",       "1.4.0"
 github "hipchat",     "1.1.3"
+github "brewcask",    "0.0.6"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
