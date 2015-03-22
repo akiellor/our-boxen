@@ -233,4 +233,6 @@ class people::akiellor {
   package { 'task': }
   package { 'unrar': }
   package { 'cloc': }
+
+  include hipchat
 }
