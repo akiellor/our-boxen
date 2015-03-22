@@ -130,6 +130,10 @@ class people::akiellor {
     content => "alias serve=\"python -m SimpleHTTPServer\"",
   }
 
+  boxen::env_script { 'editor':
+    content => "export EDITOR=vim",
+  }
+
   boxen::env_script { 'gopath':
     content => "export GOPATH=/Users/${::boxen_user}\nexport PATH=\$PATH:/Users/${::boxen_user}/bin",
   }
