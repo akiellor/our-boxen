@@ -116,6 +116,12 @@ class people::akiellor {
     require  => File["/Users/${::boxen_user}/.vim/bundle"],
   }
 
+  repository { "/Users/${::boxen_user}/.vim/bundle/vim-mustache-handlebars":
+    source   => 'mustache/vim-mustache-handlebars',
+    provider => 'git',
+    require  => File["/Users/${::boxen_user}/.vim/bundle"],
+  }
+
   package { 'ctags':}
 
   include clojure
