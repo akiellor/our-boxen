@@ -247,4 +247,18 @@ class people::akiellor {
   include hipchat
 
   include brewcask
+
+  boxen::env_script { 'java-home':
+    content => "export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home",
+  }
+
+  include postgresql
+
+  postgresql::db { 'todo-backend': }
+
+  postgresql::db { 'todo-backend-express-csp': }
+
+  homebrew::tap { 'homebrew/science': }
+
+  package { 'r': }
 }

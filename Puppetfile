@@ -74,6 +74,8 @@ github "atom",        "1.1.0"
 github "adium",       "1.4.0"
 github "hipchat",     "1.1.3"
 github "brewcask",    "0.0.6"
+github "postgresql",  "3.0.3"
+github "sysctl",      "1.0.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
