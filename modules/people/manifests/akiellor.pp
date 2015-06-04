@@ -182,6 +182,7 @@ class people::akiellor {
 
   class { 'intellij':
     edition => 'community',
+    version => '14.1.3',
   }
 
   boxen::osx_defaults { 'Make function keys do real things, and not apple things':
@@ -261,4 +262,8 @@ class people::akiellor {
   homebrew::tap { 'homebrew/science': }
 
   package { 'r': }
+
+  vagrant::plugin { 'vagrant-berkshelf':
+    version => '4.0.4'
+  }
 }
