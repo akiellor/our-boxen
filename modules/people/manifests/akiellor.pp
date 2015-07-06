@@ -266,4 +266,6 @@ class people::akiellor {
   vagrant::plugin { 'vagrant-berkshelf':
     version => '4.0.4'
   }
+
+  package { 'pass': }
 }
