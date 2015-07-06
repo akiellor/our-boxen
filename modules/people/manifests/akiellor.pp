@@ -268,4 +268,5 @@ class people::akiellor {
   }
 
   package { 'pass': }
+  package { 'cabal-install': }
 }
