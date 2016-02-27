@@ -122,6 +122,12 @@ class people::akiellor {
     require  => File["/Users/${::boxen_user}/.vim/bundle"],
   }
 
+  repository { "/Users/${::boxen_user}/.vim/bundle/ag":
+    source   => 'rking/ag.vim',
+    provider => 'git',
+    require  => File["/Users/${::boxen_user}/.vim/bundle"]
+  }
+
   package { 'ctags':}
 
   include clojure
