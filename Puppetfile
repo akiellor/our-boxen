@@ -79,6 +79,9 @@ github "hipchat",     "1.1.3"
 github "brewcask",    "0.0.6"
 github "postgresql",  "3.0.3"
 github "sysctl",      "1.0.1"
+mod "people-akiellor",
+  :git => "git@github.com:akiellor/puppet-akiellor.git",
+  :ref => "master"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
